@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="content">
+    Welcome (on) the (Sty lish) Text Generator
+</p>
+<script>
+    function store(elementId){
+        let text = document.getElementById(elementId);
+        let matches = text.textContent.match(/\(([^)]+)\)/mg);
+        let result = [];
+        for (let i = 0; i < matches.length; i++) {
+            matches[i] = matches[i].replace(/[()]/mg, '');
+            result.push(matches[i]);
+        }
+
+        return result.join('; ');
+    }
+    let newElement = document.body.appendChild(document.createElement('p'));
+    newElement.textContent = store('content');
+</script>
+
+</body>
+</html>
