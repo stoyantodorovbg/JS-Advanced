@@ -1,0 +1,25 @@
+/**
+ * Created by Stoyan on 6.7.2017 г..
+ */
+function sum(arr, start, end) {
+    "use strict";
+    let sum = 0;
+    if (start < 0) {
+        start = 0;
+    }
+    if (end > arr.length - 1) {
+        end = arr.length - 1;
+    }
+    if (arr.length == 0) {
+        return 0
+    }
+    for (let i = start; i <= end; i++) {
+        sum += Number(arr[i]);
+    }
+    return sum;
+}
+console.log(sum('text', 0, 2));
+console.log(sum([10, 'twenty', 30, 40], 0, 2));
+console.log(sum([], 1, 2));
+console.log(sum([10, 20, 30, 40, 50, 60], 3, 300));
+console.log(sum([1.1, 2.2, 3.3, 4.4, 5.5], -3, 1));

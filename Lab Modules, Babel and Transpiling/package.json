@@ -1,0 +1,8 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "systemjs": "^0.20.15"
+  }
+}
